@@ -22,7 +22,7 @@
 
 <br>
 
-# 🇬🇧 English
+# ᴇɴɢ English
 
 ## 📖 About
 

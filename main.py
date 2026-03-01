@@ -71,7 +71,7 @@ async def echo(message: types.Message):
         await message.bot.download_file(file_path, nickname)
         response = file_sender(nickname)  # initialize the file sender
         url = file_sender(nickname)  # get the avatar url
-    except TelegramBadRequest    as e:
+    except TelegramBadRequest as e:
         print(f"ОШИБКА: {e}")
         url = ""
     print(url)
@@ -79,13 +79,16 @@ async def echo(message: types.Message):
         name = message.from_user.full_name
         content = message.text
         response = hook_message(content,name,url)
-        if response == 'Webhook status code 400: {"message": "Cannot send an empty message", "code": 50006}':
-            await message.answer(f"Message has been sent to Discord! \n"
-                                 f"Sending time: [{datetime.now().strftime('%H:%M')}]")
-        else:
+        if str(response) == '<Response [400]>':
             await message.answer(f"Message was not sent to Discord :( \n"
                                  f"Sending time: [{datetime.now().strftime('%H:%M')}]")
+
+        if str(response) == '<Response [200]>':
+            await message.answer(f"Message has been sent to Discord! \n"
+                                 f"Sending time: [{datetime.now().strftime('%H:%M')}]")
+        print(response)
     except Exception as e:
+        print(e)
         await message.answer(f"Message was not sent to Discord :( \n"
                              f"Sending time: [{datetime.now().strftime('%H:%M')}]")
     sleep(1)

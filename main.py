@@ -1,5 +1,3 @@
-from quopri import EMPTYSTRING
-
 from aiogram.exceptions import TelegramBadRequest
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from aiogram import Bot, Dispatcher, types, Router, F
@@ -102,4 +100,5 @@ async def echo(message: types.Message):
 
 if __name__ == "__main__": # initialize telegram bot
     asyncio.run(main())
+
 

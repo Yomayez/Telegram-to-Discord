@@ -64,8 +64,8 @@ Temporary avatar file gets deleted
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Yomayez/YomaHook.git
-cd YomaHook
+git clone https://github.com/Yomayez/Telegram-to-Discord.git
+cd Telegram-to-Discord
 ```
 
 ### 2. Install dependencies
@@ -175,8 +175,8 @@ Uploads a file (avatar) via the second webhook and returns the direct image URL.
 ### 1. Клонируй репозиторий
 
 ```bash
-git clone https://github.com/Yomayez/YomaHook.git
-cd YomaHook
+git clone https://github.com/Yomayez/Telegram-to-Discord.git
+cd Telegram-to-Discord
 ```
 
 ### 2. Установи зависимости
